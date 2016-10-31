@@ -57,14 +57,16 @@
 		
 		document.addEventListener("deviceready",onDeviceReady,false);
 				
-				  navigator.globalization.getPreferredLanguage(
+				   function checkLanguage() {
+							navigator.globalization.getPreferredLanguage(
 							function (language) {
-							alert('baaal');
+							alert('language: ' + language.value + '\n');
 							},
-						function () {
-						alert('Error getting language\n');
-						}
-								); 
+							function () {
+							alert('Error getting language\n');
+							}
+								);
+									}
 		
 		
 			function loaded(){
